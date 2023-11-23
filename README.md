@@ -1,10 +1,9 @@
 # Project Title ✨
-🚀 Overview: This project is [briefly describe the main purpose].
-
-🔧 Installation: To install, follow [clear, concise installation instructions].
-📘 Usage: Learn how to use [your project] via [examples/screenshots].
-✨ Features: Explore [highlighted key features].
-🤝 Contributing: Contribute by [outlining contribution guidelines].
-📝 License: This project is licensed under [specified license].
-🙏 Acknowledgements: Thanks to [mention inspirations or contributors].
-📧 Contact: For questions or support, reach out to [contact information].SpringBootProject 
+🚀 Overview: This project is [briefly describe the main purpose].<br>
+🔧 Installation: To install, follow [clear, concise installation instructions].<br>
+📘 Usage: Learn how to use [your project] via [examples/screenshots].<br>
+✨ Features: Explore [highlighted key features].<br>
+🤝 Contributing: Contribute by [outlining contribution guidelines].<br>
+📝 License: This project is licensed under [specified license].<br>
+🙏 Acknowledgements: Thanks to [mention inspirations or contributors].<br>
+📧 Contact: For questions or support, reach out to [contact information].SpringBootProject<br>
