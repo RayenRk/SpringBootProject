@@ -1,5 +1,6 @@
 package com.example.springbootproject.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,6 +21,7 @@ public class Modele {
     @Column(name="pays")
     private String pays;
 
+    @JsonIgnore
     @OneToMany (mappedBy = "modele")
     private List<Voiture> voiture = new ArrayList<Voiture>();
 }

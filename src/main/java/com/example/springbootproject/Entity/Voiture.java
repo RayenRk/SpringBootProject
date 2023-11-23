@@ -1,5 +1,6 @@
 package com.example.springbootproject.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -21,6 +22,7 @@ public class Voiture {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date_mise_en_marche;
 
+    @JsonIgnore
     @OneToMany (mappedBy = "voiture")
     private List<Location> location = new ArrayList<Location>();
 

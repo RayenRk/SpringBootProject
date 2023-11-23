@@ -2,6 +2,7 @@ package com.example.springbootproject.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -14,8 +15,10 @@ public class Location {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private long id;
     @Column (name = "date_debut")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date_debut;
     @Column (name = "date_retour")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date_retour;
     @Column (name = "prix_jour")
     private int prix_jour;

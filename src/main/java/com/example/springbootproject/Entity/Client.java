@@ -1,5 +1,6 @@
 package com.example.springbootproject.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,6 +22,7 @@ public class Client {
     @Column (name = "adresse")
     private String adresse;
 
+    @JsonIgnore
     @OneToMany (mappedBy = "client")
     private List<Location> location = new ArrayList<Location>();
 }

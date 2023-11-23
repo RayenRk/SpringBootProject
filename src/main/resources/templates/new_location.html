@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ajout Location</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+<div class="container my-5">
+    <h3> Ajout Location</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="col-md-10">
+                <form action="#" th:action="@{/saveLocation}" th:object="${LocationForm}"
+                      method="post">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Date de début</label>
+                            <input type="date" th:field="*{date_debut}" class="form-control"
+                                   id="date_debut" placeholder="date_debut" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Date de Retour</label>
+                            <input type="date" th:field="*{date_retour}" class="form-control"
+                                   id="date_retour" placeholder="date_retour" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Prix Jour</label>
+                            <input type="text" th:field="*{prix_jour}" class="form-control"
+                                   id="prix_jour" placeholder="prix_jour" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Prix</label>
+                            <input type="text" th:field="*{prix}" class="form-control"
+                                   id="prix" placeholder="prix" />
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Client</label>
+                            <select th:field="*{client.id}" >
+                                <option th:each="clients : ${listClient}"
+                                        th:value="${clients.id}" th:text="${clients.nom}"/>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <label for="name" class="col-form-label">Voiture</label>
+                            <select th:field="*{voiture.id}" >
+                                <option th:each="voitures : ${listVoiture}"
+                                        th:value="${voitures.id}" th:text="${voitures.serie}"/>
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-primary" value=" Submit ">
+                        </div>
+
+                        <input type="hidden" id="id" th:field="*{id}">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
